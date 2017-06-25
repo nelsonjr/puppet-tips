@@ -275,18 +275,27 @@ which means Puppet already detected Apache and did nothing.
 
 ## Uninstall and try again (just for fun)
 
-Just so we can see Puppet in action, let's uninstall Apache and run Puppet
-again:
+Just so we can see Puppet in action, let's:
 
-```
-yum remove -y httpd
-```
+1) Uninstall Apache
 
-Confirm httpd is not there anymore (same command as you used to verify it was
-there).
+	```
+	yum remove -y httpd
+	```
 
-Now run the previous section again. Prefer the `puppetlabs-apache` instead of
-the manual this time, as we'll use the module going forward.
+2) Confirm Apache is not present
+
+	Confirm httpd is not there anymore (same command as you used to verify it was
+	there).
+
+3) Run Puppet again
+
+	Now run through the previous section again. Prefer the `puppetlabs-apache`
+	instead of the manual this time, as we'll use the module going forward.
+
+4) Confirm Apache is present
+
+	Same as step #2.
 
 
 
