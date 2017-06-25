@@ -204,7 +204,7 @@ dealing with things specific to Apache (for example which is the correct package
 name for my Operating System [in CentOS is 'httpd' but in Debian is 'apache2']
 we can use Puppet's module to hide all that from us.
 
-#### Installing the `puppetlabs-apache` module
+#### Installing the [puppetlabs-apache][] module
 
 We'll download and install a module that will teach Puppet how to deal with
 Apache like a boss:
@@ -247,7 +247,7 @@ And it should show:
 [root@my-first-app ~]# 
 ```
 
-#### Using the `puppetlabs-apache` module
+#### Using the [puppetlabs-apache][] module
 
 Create a new file with the manifest below. Let's call it apache-via-mod.pp:
 
@@ -309,3 +309,4 @@ Just so we can see Puppet in action, let's:
 [modules]: https://forge.puppet.com
 [Developer Console]: https://cloud.google.com/console
 [Google Cloud SDK]: https://cloud.google.com/sdk
+[puppetlabs-apache]: https://forge.puppet.com/puppetlabs-apache
