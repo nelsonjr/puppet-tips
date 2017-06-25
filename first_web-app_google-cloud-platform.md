@@ -46,7 +46,7 @@ step:
 
 1) Click on the machine
 2) Click Edit
-3) Check the [x] Allow HTTP traffic
+3) Check the `[x] Allow HTTP traffic` option
 4) Save
 
 ## Get your machine IP address
