@@ -247,7 +247,7 @@ And it should show:
 [root@my-first-app ~]# 
 ```
 
-#### Using the [puppetlabs-apache][] module
+#### Using the [`puppetlabs-apache`][] module
 
 Create a new file with the manifest below. Let's call it apache-via-mod.pp:
 
@@ -309,4 +309,5 @@ Just so we can see Puppet in action, let's:
 [modules]: https://forge.puppet.com
 [Developer Console]: https://cloud.google.com/console
 [Google Cloud SDK]: https://cloud.google.com/sdk
+[`puppetlabs-apache`]: https://forge.puppet.com/puppetlabs-apache
 [puppetlabs-apache]: https://forge.puppet.com/puppetlabs-apache
