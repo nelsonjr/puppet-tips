@@ -1,4 +1,4 @@
-# Installing Puppet on a Google Cloud Platform machine
+# Installing Puppet & Apache on a Google Cloud Platform machine
 
 * [Why Puppet?](#why-puppet)
 * [Get a machine](#get-a-machine)

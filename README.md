@@ -4,7 +4,9 @@ This repository contains step-by-step instructions and tips for Puppet users.
 
 ## Google Cloud Platform
 
-- [Deploy Simple Hello World Web Application][]
+- [Setup Puppet and Apache][]
+- [Serving my first Web site][]
 
 
-[Deploy Simple Hello World Web Application]: hello-world_webapp_google-cloud-platform_with_puppet.md
+[Setup Puppet and Apache]: setup_puppet_and_apache_google-cloud-platform.md
+[Serving my first Web site]: first_web-app_google-cloud-platform.md
