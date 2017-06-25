@@ -41,6 +41,7 @@ file { '/var/www/html/index.html':
   ensure => absent,
 }
 
+# Define our main website as a PHP page
 file { '/var/www/html/index.php':
   ensure  => file,
   content => '<?php echo "Now it is " . date("r"); ?>',
