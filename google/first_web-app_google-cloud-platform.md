@@ -95,6 +95,14 @@ Puppet file.
 You should see your new content.
 
 
+## What's Next? I don't want boring, static pages!
+
+The content here is static. The Internet is full of sites that create content
+when you visit them. Let's do the same! Follow [Setting up PHP & Hello PHP
+site][next] to get there.
+
+
+[next]: setting_up_php.md
 [Setup Puppet and Apache]: setup_puppet_and_apache_google-cloud-platform.md
 [gcloud]: https://cloud.google.com/sdk
 [Google Cloud SDK]: https://cloud.google.com/sdk

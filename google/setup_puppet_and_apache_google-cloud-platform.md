@@ -157,7 +157,7 @@ Notice: Applied catalog in 0.01 seconds
 
 You can tell Puppet to install software on your machine easily. You just declare
 a `package` block. For example, to install Apache (web server) on our Cent OS
-machine we crate a file, say `apache.pp`:
+machine we create a file, say `apache.pp`:
 
 ```puppet
 package { 'httpd':
@@ -271,10 +271,13 @@ file_line { 'turn-warnings-off':
 }
 ```
 
-This manifest uses `file_line` which is provided by the `puppetlabs-stdlib`
-module, which was installed automatically by the `pupplabs-apache` module. In
-case you did not install the Apache module and still wish to run the manifest
-above, install the `stdlib` module manually:
+As before put the code above in a file, e.g. warn-off.pp, and issue `puppet
+apply warn-off.pp` to execute it.
+
+Note: This manifest uses `file_line` which is provided by the
+`puppetlabs-stdlib` module, which was installed automatically by the
+`pupplabs-apache` module. In case you did not install the Apache module and
+still wish to run the manifest above, install the `stdlib` module manually:
 
 ```
 puppet module install puppetlabs-stdlib
@@ -348,8 +351,15 @@ Just so we can see Puppet in action, let's:
 	Same as step #2.
 
 
+# What's Next?  What's the use of all of this?
+
+Now that we have a computer setup with a Web server it is time we serve traffic
+to the Internet. Follow the [Simplest Web page on Google Cloud Platform with
+Puppet][next] to get it done.
 
 
+
+[next]: first_web-app_google-cloud-platform.md
 [Puppet Enterprise]: https://puppet.com/product/puppet-enterprise
 [modules]: https://forge.puppet.com
 [Developer Console]: https://cloud.google.com/console

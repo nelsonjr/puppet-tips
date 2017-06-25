@@ -12,11 +12,12 @@ simple, easy to maintain, and reliable deployment setup.
 
 ### Getting Started
 
-- [Setup Puppet and Apache][]: This is the simplest step-by-step to Puppet and
-  cloud ever written! (allegedly)
-- [Serving my first Web site][]: This is the minimalistic "serve me a page"
-  step-by-step
-- [Serving my first PHP site][]: "serve me a page" now with dynamic PHP content
+- [Setup Puppet and Apache][hello-puppet]: This is the simplest step-by-step to
+  Puppet and cloud ever written! (allegedly)
+- [Serving my first Web site][hello-apache]: This is the minimalistic "serve me
+  a page" step-by-step
+- [Serving my first PHP site][hello-php]: "serve me a page" now with dynamic PHP
+  content
 
 ### Advanced Cloud Deployment
 
@@ -25,9 +26,9 @@ simple, easy to maintain, and reliable deployment setup.
    Puppet to deploy an e-commerce portal named [Magento][].
 
 
-[Setup Puppet and Apache]: google/setup_puppet_and_apache_google-cloud-platform.md
-[Serving my first Web site]: google/first_web-app_google-cloud-platform.md
-[Serving my first PHP site]: google/setting_up_php.md
+[hello-puppet]: google/setup_puppet_and_apache_google-cloud-platform.md
+[hello-apache]: google/first_web-app_google-cloud-platform.md
+[hello-php]: google/setting_up_php.md
 [modules]: https://forge.puppet.com
 [Deploying an e-Commerce portal]: https://github.com/nelsonjr/puppetconf-2016
 [Puppet Conf 2016]: https://puppetconf2016.sched.com/event/6fj8/puppetize-all-the-things-google-cloud-nelson-araujo-google-david-schmitt-puppet

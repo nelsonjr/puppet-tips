@@ -1,4 +1,4 @@
-# Setting up PHP
+# Setting up PHP & Hello PHP site
 
 [PHP][] is one most versatile web languages around. It is also very simple to
 setup. There are various other web toolkits out there, but for the sake of
