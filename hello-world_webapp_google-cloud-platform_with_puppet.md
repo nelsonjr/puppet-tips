@@ -182,6 +182,78 @@ Notice: Applied catalog in 0.12 seconds
 
 As you can see now Puppet did not do anything.
 
+### Like a boss!
+
+Puppet has an extensive library of modules that you can leverage. Instead of
+dealing with things specific to Apache (for example which is the correct package
+name for my Operating System [in CentOS is 'httpd' but in Debian is 'apache2']
+we can use Puppet's module to hide all that from us.
+
+### Installing the `puppetlabs-apache` module
+
+We'll download and install a module that will teach Puppet how to deal with
+Apache like a boss:
+
+```
+puppet module install puppetlabs-apache
+```
+
+That should show something like this:
+
+```
+[root@my-first-app ~]# puppet module install puppetlabs-apache
+Notice: Preparing to install into
+/etc/puppetlabs/code/environments/production/modules ...
+Notice: Downloading from https://forgeapi.puppet.com ...
+Notice: Installing -- do not interrupt ...
+/etc/puppetlabs/code/environments/production/modules
+└─┬ puppetlabs-apache (v1.11.0)
+├── puppetlabs-concat (v2.2.1)
+└── puppetlabs-stdlib (v4.17.1)
+[root@my-first-app ~]# 
+```
+
+Let's confirm they are all there:
+
+```
+puppet module list
+```
+
+And it should show:
+
+```
+[root@my-first-app ~]# puppet module list
+/etc/puppetlabs/code/environments/production/modules
+├── puppetlabs-apache (v1.11.0)
+├── puppetlabs-concat (v2.2.1)
+└── puppetlabs-stdlib (v4.17.1)
+/etc/puppetlabs/code/modules (no modules installed)
+/opt/puppetlabs/puppet/modules (no modules installed)
+[root@my-first-app ~]# 
+```
+
+#### Using the `puppetlabs-apache` module
+
+Create a new file with the manifest below. Let's call it apache-via-mod.pp:
+
+```puppet
+include apache
+```
+
+and apply it:
+
+```
+puppet apply apache-via-mod.pp
+```
+
+Now a million lines will go by. Don't panic, it's okay :) Puppet is catching up
+with the module and installing what it needs.
+
+*Nevertheless* you will notice that the `ensure: created` is not in that list,
+which means Puppet already detected Apache and did nothing.
+
+
+
 
 [Puppet Enterprise]: https://puppet.com/product/puppet-enterprise
 [modules]: https://forge.puppet.com
