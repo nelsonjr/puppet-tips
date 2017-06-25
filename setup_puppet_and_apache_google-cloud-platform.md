@@ -204,7 +204,7 @@ dealing with things specific to Apache (for example which is the correct package
 name for my Operating System [in CentOS is 'httpd' but in Debian is 'apache2']
 we can use Puppet's module to hide all that from us.
 
-#### Installing the [puppetlabs-apache][] module
+#### Installing the [`puppetlabs-apache`][] module
 
 We'll download and install a module that will teach Puppet how to deal with
 Apache like a boss:
