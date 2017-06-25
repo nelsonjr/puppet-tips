@@ -25,6 +25,21 @@ Notice: /Stage[main]/Main/File[/var/www/html/index.html]/ensure: defined content
 Notice: Applied catalog in 0.65 seconds
 ```
 
+### Running gcloud... 'Insufficient Permission'. Why!?
+
+In a security conscious environment the machine should not be able
+to change its own security settings, or an attacker could open services if they
+manage to get it. That's the default settings of Google Cloud Platform.
+
+The means you have to run the [gcloud][] commands from outside the computer you
+wish to configure, e.g. from the computer you used to _create_ the machine, or
+from your computer (the computer you are actually typing on).
+
+If you want to use the [gcloud][] commands please install the [Google Cloud
+SDK][] on your computer. Alternatively you can use the [Developer Console][] to
+perform the configuration actions.
+
+
 ## Opening Firewall
 
 For security Google Cloud Platform built-in firewall blocks all access to your
@@ -78,3 +93,5 @@ You should see your new content.
 
 [Setup Puppet and Apache]: setup_puppet_and_apache_google-cloud-platform.md
 [gcloud]: https://cloud.google.com/sdk
+[Google Cloud SDK]: https://cloud.google.com/sdk
+[Developer Console]: https://cloud.google.com/console
