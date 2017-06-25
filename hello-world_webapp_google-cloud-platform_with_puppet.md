@@ -61,9 +61,44 @@ We'll be using the Puppet Open Source. For more sophisticated and corporate
 grade deployments you may want to look into [Puppet Enterprise][] (PE). Don't
 look into PE now. That was just FYI and future use.
 
+Run:
+
 ```
 rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
 yum install puppet-agent
+```
+
+... and follow the screen prompts.
+
+To confirm Puppet is installed:
+
+```
+rpm -qa | grep puppet
+```
+
+It should show `puppet-agent` in the system:
+
+```
+# rpm -qa | grep puppet
+puppetlabs-release-pc1-1.1.0-5.el7.noarch
+puppet-agent-1.10.4-1.el7.x86_64
+```
+
+## Get Puppet client on your path
+
+As you just installed Puppet it is not yet available on your application path.
+The easiest way to get it available is to exit the super user shell and come
+back in:
+
+```
+[root@my-first-app ~]# puppet
+-bash: puppet: command not found
+[root@my-first-app ~]# exit
+logout
+[nelsona@my-first-app ~]$ sudo -i
+[root@my-first-app ~]# puppet
+See 'puppet help' for help on available puppet subcommands
+[root@my-first-app ~]# 
 ```
 
 
