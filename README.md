@@ -4,9 +4,9 @@ This repository contains step-by-step instructions and tips for Puppet users.
 
 ### Why Puppet?
 
-Puppet helps automate deployment, and has a vast amount of [modules][] with
-deployment scripts ready for use. We'll leverage those modules to create a
-simple, yet easy to maintain and reliable deployment setup.
+Puppet helps automate deployment, and has a vast selection of powerful
+deployment [modules][] ready for use. We'll leverage those modules to create a
+simple, easy to maintain, and reliable deployment setup.
 
 ## Google Cloud Platform
 
