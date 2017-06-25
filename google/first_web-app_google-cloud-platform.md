@@ -1,6 +1,7 @@
 # Simplest Web page on Google Cloud Platform with Puppet
 
-{:toc}
+* [Creating your first page]()
+* [Running gcloud... 'Insufficient Permission'. Why!?](#running-gcloud-insufficient-permission-why)
 
 You need to have Puppet and Apache installed. Follow the steps on
 setup [Setup Puppet and Apache][] before continuing.
