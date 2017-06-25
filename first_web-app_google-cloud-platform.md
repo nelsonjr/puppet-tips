@@ -76,5 +76,5 @@ Puppet file.
 You should see your new content.
 
 
-[Puppet and Apache on GCP]: 
 [Setup Puppet and Apache]: setup_puppet_and_apache_google-cloud-platform.md
+[gcloud]: https://cloud.google.com/sdk
