@@ -10,6 +10,7 @@
    * [The "hard" way (automated, pero-no-mucho)](#the-hard-way-automated-pero-no-mucho)
    * [Like a boss!](#like-a-boss)
       * [Installing the puppetlabs-apache module](#installing-the-puppetlabs-apache-module)
+      * [Turning off warnings for puppetlabs-apache module](#turning-off-warning-for-puppetlabs-apache-module)
       * [Using the puppetlabs-apache module](#using-the-puppetlabs-apache-module)
 * [Uninstall and try again (just for fun)](#uninstall-and-try-again-just-for-fun)
 
