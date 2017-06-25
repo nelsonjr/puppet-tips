@@ -30,7 +30,12 @@ Notice: Applied catalog in 4.51 seconds
 
 Puppet did all the necessary work to setup the necessary modules on your
 machine, including the necessary packages from the Operating System. Apache is
-now *ready* to take PHP content, so let's do it:
+now *ready* to take PHP content, so let's do it.
+
+
+## Update main website page
+
+Let's replace our main "coming soon" page with a page that tells the time:
 
 ```puppet
 include apache
