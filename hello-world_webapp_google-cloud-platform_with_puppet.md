@@ -1,7 +1,5 @@
 # Installing Puppet on a Google Cloud Platform machine
 
-[TOC]
-
 ## Why Puppet?
 
 Puppet helps automate deployment, and has a vast amount of [modules][] with
@@ -30,11 +28,32 @@ We'll be working inside the machine, so let's SSH to it so we can run commands
 on it. If you created with the Developer Console click the SSH button for the
 machine we'll be working on.
 
-If you created using gcloud, you can
+If you created using gcloud, you can SSH using gcloud tool:
 
 ```
 gcloud compute ssh my-first-app --zone=us-central1-a
 ```
+
+## Becoming 'root'
+
+All the commands we'll be running to set the machine are privileged, so we need
+to become super user. On Linux that's done with sudo command. Once you become
+super user the prompt will change from '$' to a '#'.
+
+Type on your SSH connection:
+
+```
+sudo -i
+```
+
+The screen should look like this:
+
+```
+[nelsona@my-first-app ~]$ sudo -i
+[root@my-first-app ~]# 
+```
+
+So make sure all commands from now on are typed as super user (note the '#').
 
 ## Install Puppet
 
@@ -44,6 +63,7 @@ look into PE now. That was just FYI and future use.
 
 ```
 rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
+yum install puppet-agent
 ```
 
 
