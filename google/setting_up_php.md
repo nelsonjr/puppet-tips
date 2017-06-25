@@ -59,12 +59,13 @@ file { '/var/www/html/index.php':
 [root@my-first-app ~]# puppet apply php-sample.pp 
 Notice: Compiled catalog for my-first-app.c.graphite-playground.google.com.internal in environment production in 1.31 seconds
 Notice: /Stage[main]/Main/File[/var/www/html/index.html]/ensure: removed
-Notice: /Stage[main]/Main/File[/var/www/html/index.php]/ensure: defined content as '{md5}28d8c2a602a204496942c2d77989035e'
+Notice: /Stage[main]/Main/File[/var/www/html/index.php]/ensure: defined content as '{md5}7b787125b1026cc7582f46a127f58115'
 Notice: Applied catalog in 0.67 seconds
 [root@my-first-app ~]#
 ```
 
-Now refresh your browser and you should see something like this:
+Now refresh your browser (where the 'coming soon' page was showing) and you
+should see something like this:
 
 ```
 Now it is Sun, 25 Jun 2017 07:38:19 +0000
