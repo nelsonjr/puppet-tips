@@ -49,7 +49,7 @@ file { '/var/www/html/index.html':
 # Define our main website as a PHP page
 file { '/var/www/html/index.php':
   ensure  => file,
-  content => '<?php echo "Now it is " . date("r"); ?>',
+  content => '<?php echo "Now it is " . date("r"); ?>', # echoes the time
 }
 ```
 
