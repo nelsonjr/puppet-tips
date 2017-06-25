@@ -2,7 +2,7 @@
 
 This repository contains step-by-step instructions and tips for Puppet users.
 
-## Why Puppet?
+### Why Puppet?
 
 Puppet helps automate deployment, and has a vast amount of [modules][] with
 deployment scripts ready for use. We'll leverage those modules to create a
