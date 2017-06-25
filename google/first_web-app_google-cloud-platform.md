@@ -1,5 +1,7 @@
 # Simplest Web page on Google Cloud Platform with Puppet
 
+{:toc}
+
 You need to have Puppet and Apache installed. Follow the steps on
 setup [Setup Puppet and Apache][] before continuing.
 
@@ -25,11 +27,12 @@ Notice: /Stage[main]/Main/File[/var/www/html/index.html]/ensure: defined content
 Notice: Applied catalog in 0.65 seconds
 ```
 
-### Running gcloud... 'Insufficient Permission'. Why!?
+## Running gcloud... 'Insufficient Permission'. Why!?
 
 In a security conscious environment the machine should not be able
 to change its own security settings, or an attacker could open services if they
-manage to get it. That's the default settings of Google Cloud Platform.
+manage to get into the machine. That's the default settings of Google Cloud
+Platform.
 
 The means you have to run the [gcloud][] commands from outside the computer you
 wish to configure, e.g. from the computer you used to _create_ the machine, or
