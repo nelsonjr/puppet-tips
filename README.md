@@ -2,7 +2,7 @@
 
 This repository contains step-by-step instructions and tips for Puppet users.
 
-## Google Cloud Platform
+## Getting Started w/ Google Cloud Platform
 
 - [Setup Puppet and Apache][]
 - [Serving my first Web site][]
