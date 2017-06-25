@@ -28,8 +28,18 @@ Using the gcloud tool:
 
 ```
 gcloud compute instances create my-first-app \
-  --zone=us-central1-a --image-family=centos-7 --image-project=centos-cloud
+  --machine-type=f1-micro --zone=us-central1-a \
+  --image-family=centos-7 --image-project=centos-cloud
 ```
+
+_(If you are typing the command above instead of copying/pasting do not
+type the '\' (backslash) characters at the end of the line. Type everything
+but the '\' in a single line instead)_
+
+This example uses `f1-micro` as the machine type. That's the cheapest machine
+available (it is limited in CPU and memory). For these examples it is enough,
+but for serving your real application you should use something more robust, at
+minimum `n1-standard-1`.
 
 ## SSH to the machine
 
