@@ -223,8 +223,8 @@ Notice: Downloading from https://forgeapi.puppet.com ...
 Notice: Installing -- do not interrupt ...
 /etc/puppetlabs/code/environments/production/modules
 └─┬ puppetlabs-apache (v1.11.0)
-├── puppetlabs-concat (v2.2.1)
-└── puppetlabs-stdlib (v4.17.1)
+  ├── puppetlabs-concat (v2.2.1)
+  └── puppetlabs-stdlib (v4.17.1)
 [root@my-first-app ~]# 
 ```
 
