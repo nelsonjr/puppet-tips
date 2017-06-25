@@ -132,6 +132,56 @@ Notice: Applied catalog in 0.01 seconds
 [root@my-first-app ~]# 
 ```
 
+## Installing software
+
+### The "hard" way (automated, pero-no-mucho)
+
+You can tell Puppet to install software on your machine easily. You just declare
+a `package` block. For example, to install Apache (web server) on our Cent OS
+machine we crate a file, say `apache.pp`:
+
+``` puppet
+package { 'httpd':
+  ensure => installed,
+}
+```
+
+Now we apply the file:
+
+```
+[root@my-first-app ~]# puppet apply apache.pp
+Notice: Compiled catalog for my-first-app.c.graphite-playground.google.com.internal in environment production in 0.79 seconds
+Notice: /Stage[main]/Main/Package[httpd]/ensure: created
+Notice: Applied catalog in 3.24 seconds
+[root@my-first-app ~]# 
+```
+
+Notice the `ensure: created` in the log above. That means that Puppet just
+installed Apache on your machine.
+
+Let's confirm that:
+
+```
+[root@my-first-app ~]# rpm -qa | grep httpd
+httpd-tools-2.4.6-45.el7.centos.4.x86_64
+httpd-2.4.6-45.el7.centos.4.x86_64
+[root@my-first-app ~]# 
+```
+
+*COOL PART* The coolest part is that Puppet is *not* a scripting language. That
+means that you didn't ask Puppet to install Apache. Instead, you asked Puppet to
+_ensure Puppet is installed_. That means if Apache is already installed, Puppet
+will not do anything to your machine. Let's run it again:
+
+```
+[root@my-first-app ~]# puppet apply apache.pp
+Notice: Compiled catalog for my-first-app.c.graphite-playground.google.com.internal in environment production in 0.98 seconds
+Notice: Applied catalog in 0.12 seconds
+[root@my-first-app ~]# 
+```
+
+As you can see now Puppet did not do anything.
+
 
 [Puppet Enterprise]: https://puppet.com/product/puppet-enterprise
 [modules]: https://forge.puppet.com
