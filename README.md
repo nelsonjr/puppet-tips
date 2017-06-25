@@ -16,6 +16,6 @@ simple, yet easy to maintain and reliable deployment setup.
 - [Serving my first Web site][]
 
 
-[Setup Puppet and Apache]: setup_puppet_and_apache_google-cloud-platform.md
-[Serving my first Web site]: first_web-app_google-cloud-platform.md
+[Setup Puppet and Apache]: google/setup_puppet_and_apache_google-cloud-platform.md
+[Serving my first Web site]: google/first_web-app_google-cloud-platform.md
 [modules]: https://forge.puppet.com
