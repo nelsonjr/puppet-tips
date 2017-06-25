@@ -1,4 +1,4 @@
-# Puppet Tips & Tricks
+# Puppet Tutorials & Tips & Tricks
 
 This repository contains step-by-step instructions and tips for Puppet users.
 
