@@ -13,7 +13,7 @@ simple, yet easy to maintain and reliable deployment setup.
 ### Getting Started
 
 - [Setup Puppet and Apache][]: This is the simplest step-by-step to Puppet and
-  Google Cloud ever written (allegedly :)).
+  Google Cloud ever written! (allegedly)
 - [Serving my first Web site][]: This is the minimalistic "serve me a page"
   step-by-step
 
