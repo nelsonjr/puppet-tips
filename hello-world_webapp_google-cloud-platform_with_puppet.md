@@ -249,6 +249,11 @@ puppet apply apache-via-mod.pp
 Now a million lines will go by. Don't panic, it's okay :) Puppet is catching up
 with the module and installing what it needs.
 
+*NOTE* Ignore all the yellow lines. There is a version mismatch on Puppet
+modules but that does not affect this tutorial. I filed a bug to track that and
+eventually update this ;-) [link to
+bug](https://github.com/nelsonjr/puppet-tips/issues/2)
+
 *Nevertheless* you will notice that the `ensure: created` is not in that list,
 which means Puppet already detected Apache and did nothing.
 
