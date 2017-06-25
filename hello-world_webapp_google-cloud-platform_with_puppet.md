@@ -168,7 +168,7 @@ httpd-2.4.6-45.el7.centos.4.x86_64
 [root@my-first-app ~]# 
 ```
 
-*COOL PART* The coolest part is that Puppet is *not* a scripting language. That
+*COOL PART:* The coolest part is that Puppet is *not* a scripting language. That
 means that you didn't ask Puppet to install Apache. Instead, you asked Puppet to
 _ensure Puppet is installed_. That means if Apache is already installed, Puppet
 will not do anything to your machine. Let's run it again:
