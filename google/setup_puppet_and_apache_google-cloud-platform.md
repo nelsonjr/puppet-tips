@@ -240,6 +240,47 @@ And it should show:
 [root@my-first-app ~]# 
 ```
 
+#### Turning off warning for [`puppetlabs-apache`][] module
+
+Background: Puppet is phasing out their old 3.x version and
+[puppetlabs-apache][] module did not get converted yet, so lots of warnings
+would be printed until they (or the community) update this module.
+
+To avoid having to see those warnings go by we'll turn warnings off. This should
+be a temporary action and you should turn it back on as soon as possible.
+
+To be cute we'll use Puppet to configure Puppet. I find it cool a tool can
+configure itself :)
+
+```puppet
+file_line { 'turn-warnings-off':
+  path  => '/etc/puppetlabs/puppet/puppet.conf',
+  line  => 'strict = off',
+  match => 'strict =',
+}
+```
+
+This manifest uses `file_line` which is provided by the `puppetlabs-stdlib`
+module, which was installed automatically by the `pupplabs-apache` module. In
+case you did not install the Apache module and still wish to run the manifest
+above, install the `stdlib` module manually:
+
+```
+puppet module install puppetlabs-stdlib
+```
+
+Alternatively you could have done the command `puppet config set strict off`,
+but you'd need to do on every computer you setup. By putting in the Puppet
+manifest you do *not* have to remember any setup steps. That's my preferred
+method.
+
+##### Putting warnings back
+
+When you need to put the warnings back you revert the steps you did in this
+section. You can either run a command `puppet config set strict warning` or
+update your manifest to have `warning` instead of `off`.
+
+
 #### Using the [`puppetlabs-apache`][] module
 
 Create a new file with the manifest below. Let's call it apache-via-mod.pp:
