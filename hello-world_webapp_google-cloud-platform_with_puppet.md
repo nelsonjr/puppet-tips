@@ -258,6 +258,22 @@ bug](https://github.com/nelsonjr/puppet-tips/issues/2)
 which means Puppet already detected Apache and did nothing.
 
 
+## Uninstall and try again
+
+Just so we can see Puppet in action, let's uninstall Apache and run Puppet
+again:
+
+```
+yum remove -y httpd
+```
+
+Confirm httpd is not there anymore (same command as you used to verify it was
+there).
+
+Now run the previous section again. Prefer the `puppetlabs-apache` instead of
+the manual this time, as we'll use the module going forward.
+
+
 
 
 [Puppet Enterprise]: https://puppet.com/product/puppet-enterprise
