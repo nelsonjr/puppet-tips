@@ -10,9 +10,9 @@
 * [Installing software](#installing-software)
    * [The "hard" way (automated, pero-no-mucho)](#the-hard-way-automated-pero-no-mucho)
    * [Like a boss!](#like-a-boss)
-		  * [Installing the puppetlabs-apache module](#installing-the-puppetlabs-apache-module)
+      * [Installing the puppetlabs-apache module](#installing-the-puppetlabs-apache-module)
       * [Using the puppetlabs-apache module](#using-the-puppetlabs-apache-module)
-* [Uninstall and try again](#uninstall-and-try-again)
+* [Uninstall and try again (just for fun)](#uninstall-and-try-again-just-for-fun)
 
 
 ## Why Puppet?
@@ -273,7 +273,7 @@ bug](https://github.com/nelsonjr/puppet-tips/issues/2)
 which means Puppet already detected Apache and did nothing.
 
 
-## Uninstall and try again
+## Uninstall and try again (just for fun)
 
 Just so we can see Puppet in action, let's uninstall Apache and run Puppet
 again:
