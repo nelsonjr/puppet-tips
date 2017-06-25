@@ -1,6 +1,5 @@
 # Puppet & Apache on a Google Cloud Platform machine
 
-* [Why Puppet?](#why-puppet)
 * [Get a machine](#get-a-machine)
 * [SSH to the machine](#ssh-to-the-machine)
 * [Becoming 'root'](#becoming-root)
@@ -14,12 +13,6 @@
       * [Using the puppetlabs-apache module](#using-the-puppetlabs-apache-module)
 * [Uninstall and try again (just for fun)](#uninstall-and-try-again-just-for-fun)
 
-
-## Why Puppet?
-
-Puppet helps automate deployment, and has a vast amount of [modules][] with
-deployment scripts ready for use. We'll leverage those modules to create a
-simple, yet easy to maintain and reliable deployment setup.
 
 ## Get a machine
 
