@@ -107,7 +107,9 @@ Create a file with the following contents. Let's call it `hello.pp` (`pp` is
 Puppet's manifest extension):
 
 ```
-notify { 'hello': message => 'This is my first Puppet app' }
+notify { 'hello':
+  message => 'This is my first Puppet app'
+}
 ```
 
 To run a Puppet manifest (without a server) we use `apply`:
