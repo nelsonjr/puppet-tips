@@ -16,7 +16,7 @@ simple, easy to maintain, and reliable deployment setup.
   cloud ever written! (allegedly)
 - [Serving my first Web site][]: This is the minimalistic "serve me a page"
   step-by-step
-- [Setting up PHP][]: Getting PHP ready in less than a minute
+- [Serving my first PHP page][]: "serve me a page" now with dynamic PHP content
 
 ### Advanced Cloud Deployment
 
