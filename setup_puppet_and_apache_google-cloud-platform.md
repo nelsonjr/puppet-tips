@@ -272,6 +272,11 @@ bug](https://github.com/nelsonjr/puppet-tips/issues/2)
 *Nevertheless* you will notice that the `ensure: created` is not in that list,
 which means Puppet already detected Apache and did nothing.
 
+*FYI (for later)*: The [puppetlabs-apache][] module is very, very, very well
+done and comprehensive. Its full documentation and glory can see here:
+[http://forge.puppet.com/puppetlabs-apache](
+  http://forge.puppet.com/puppetlabs-apache)
+
 
 ## Uninstall and try again (just for fun)
 
