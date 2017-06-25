@@ -106,7 +106,7 @@ See 'puppet help' for help on available puppet subcommands
 Create a file with the following contents. Let's call it `hello.pp` (`pp` is
 Puppet's manifest extension):
 
-```
+```puppet
 notify { 'hello':
   message => 'This is my first Puppet app'
 }
@@ -140,7 +140,7 @@ You can tell Puppet to install software on your machine easily. You just declare
 a `package` block. For example, to install Apache (web server) on our Cent OS
 machine we crate a file, say `apache.pp`:
 
-``` puppet
+```puppet
 package { 'httpd':
   ensure => installed,
 }
