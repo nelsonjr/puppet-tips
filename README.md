@@ -16,7 +16,7 @@ simple, easy to maintain, and reliable deployment setup.
   cloud ever written! (allegedly)
 - [Serving my first Web site][]: This is the minimalistic "serve me a page"
   step-by-step
-- [Serving my first PHP page][]: "serve me a page" now with dynamic PHP content
+- [Serving my first PHP site][]: "serve me a page" now with dynamic PHP content
 
 ### Advanced Cloud Deployment
 
@@ -27,7 +27,7 @@ simple, easy to maintain, and reliable deployment setup.
 
 [Setup Puppet and Apache]: google/setup_puppet_and_apache_google-cloud-platform.md
 [Serving my first Web site]: google/first_web-app_google-cloud-platform.md
-[Serving my first PHP page]: google/setting_up_php.md
+[Serving my first PHP site]: google/setting_up_php.md
 [modules]: https://forge.puppet.com
 [Deploying an e-Commerce portal]: https://github.com/nelsonjr/puppetconf-2016
 [Puppet Conf 2016]: https://puppetconf2016.sched.com/event/6fj8/puppetize-all-the-things-google-cloud-nelson-araujo-google-david-schmitt-puppet
