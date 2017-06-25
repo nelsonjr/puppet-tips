@@ -1,5 +1,11 @@
 # Installing Puppet on a Google Cloud Platform machine
 
+## Why Puppet?
+
+Puppet helps automate deployment, and has a vast amount of [modules][] with
+deployment scripts ready for use. We'll leverage those modules to create a
+simple, yet easy to maintain and reliable deployment setup.
+
 ## Step 1: Get a machine
 
 We need a machine to work on :). You can get a machine by using the Developer
@@ -25,5 +31,14 @@ machine we'll be working on.
 If you created using gcloud, you can
 
 ```
-gcloud compute ssh my-first-app
+gcloud compute ssh my-first-app --zone=us-central1-a
 ```
+
+## Step 3: Install Puppet
+
+We'll be using the Puppet Open Source. For more sophisticated and corporate
+grade deployments you may want to look into [Puppet Enterprise][] 
+
+
+[Puppet Enterprise]: https://puppet.com/product/puppet-enterprise
+[modules]: https://forge.puppet.com
