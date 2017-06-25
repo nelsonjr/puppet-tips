@@ -1,6 +1,6 @@
 # Installing Puppet on a Google Cloud Platform machine
 
-[toc]
+[TOC]
 
 ## Why Puppet?
 
