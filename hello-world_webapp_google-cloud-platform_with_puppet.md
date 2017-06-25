@@ -1,4 +1,20 @@
-# Installing Puppet on a Google Cloud Platform machine
+Installing Puppet on a Google Cloud Platform machine
+
+
+      * [Why Puppet?](#why-puppet)
+      * [Get a machine](#get-a-machine)
+      * [SSH to the machine](#ssh-to-the-machine)
+      * [Becoming 'root'](#becoming-root)
+      * [Install Puppet](#install-puppet)
+         * [Get Puppet client on your path](#get-puppet-client-on-your-path)
+      * [Simplest Puppet manifest](#simplest-puppet-manifest)
+      * [Installing software](#installing-software)
+         * [The "hard" way (automated, pero-no-mucho)](#the-hard-way-automated-pero-no-mucho)
+         * [Like a boss!](#like-a-boss)
+         * [Installing the puppetlabs-apache module](#installing-the-puppetlabs-apache-module)
+            * [Using the puppetlabs-apache module](#using-the-puppetlabs-apache-module)
+      * [Uninstall and try again](#uninstall-and-try-again)
+
 
 ## Why Puppet?
 
