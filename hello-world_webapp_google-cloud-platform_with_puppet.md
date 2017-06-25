@@ -84,7 +84,7 @@ puppetlabs-release-pc1-1.1.0-5.el7.noarch
 puppet-agent-1.10.4-1.el7.x86_64
 ```
 
-## Get Puppet client on your path
+### Get Puppet client on your path
 
 As you just installed Puppet it is not yet available on your application path.
 The easiest way to get it available is to exit the super user shell and come
@@ -98,6 +98,35 @@ logout
 [nelsona@my-first-app ~]$ sudo -i
 [root@my-first-app ~]# puppet
 See 'puppet help' for help on available puppet subcommands
+[root@my-first-app ~]# 
+```
+
+## Simplest Puppet manifest
+
+Create a file with the following contents. Let's call it `hello.pp` (`pp` is
+Puppet's manifest extension):
+
+```
+notify { 'hello': message => 'This is my first Puppet app' }
+```
+
+To run a Puppet manifest (without a server) we use `apply`:
+
+```
+puppet apply <your-file>
+```
+
+In the `hello.pp` case it should have an output like this:
+
+```
+[root@my-first-app ~]# puppet apply hello.pp 
+Notice: Compiled catalog for
+my-first-app.c.graphite-playground.google.com.internal in environment production
+in 0.09 seconds
+Notice: This is my first Puppet app
+Notice: /Stage[main]/Main/Notify[hello]/message: defined 'message' as 'This is
+my first Puppet app'
+Notice: Applied catalog in 0.01 seconds
 [root@my-first-app ~]# 
 ```
 
