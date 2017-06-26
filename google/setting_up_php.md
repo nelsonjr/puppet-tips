@@ -120,11 +120,15 @@ understand as it is a core Puppet strength. This tells Puppet to notify the
 service (and reconfigure itself) if there are changes to the file being applied.
 Notice the `Service[httpd]: Triggered 'refresh'` in your apply output.
 
-Why? PHP reads this file when the Apache web server starts up. That means if you
-create the file and put it there nothing happens until next time the Apache
-server restarts (or reloads gracefully). Puppet is now watching the file you
-defined, and if **and only if** there are changes to that file it will tell
-Apache to reload gracefully, picking up the changes.
+**Why?** PHP reads this file when the Apache web server starts up. That means if
+you create the file and put it there nothing happens until next time the Apache
+server restarts (or reloads gracefully).
+
+### What did Puppet do under the covers?
+
+Puppet is now watching the file you defined, and if **and only if** there are
+changes to that file it will tell Apache to reload gracefully, picking up the
+changes.
 
 ### Try without Puppet yourself
 
@@ -136,14 +140,20 @@ Apache to reload gracefully, picking up the changes.
 6. Now it shows the correct time zones.
 
 Puppet just did that for you without needing to resort to understanding which
-command on the operating system does that (systemctl is for Cent OS, other
-operating systems uses different commands), and without the need to know how to
-interface with Apache itself.
+command on the operating system does that (systemctl is for Cent OS). **Other
+operating systems uses different commands that you have to know to manage
+them.** Note that you also did not need to know all the inner details of Apache
+or PHP get this this going.
 
-This is what Puppet is great for.
+> Pro Tip: Before you deploy your application for real (what we call production)
+> I suggest you do understand better Apache and PHP. How to configure it
+> properly: to run fast, secure, reliable. It sucks when you put your site and
+> some hacker vandalizes it, or worse, steals all your data.
+
+That's it for now. I hope you got the basis of what Puppet is great at.
 
 Ah... added bonus: these manifests you wrote will run on any Linux operating
-system without changes.
+system without changes. It is what we call _portable code_.
 
 
 [PHP]: https://www.php.net
