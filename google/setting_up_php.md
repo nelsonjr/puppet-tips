@@ -93,9 +93,9 @@ file { '/etc/php.d/timezone.ini':
   ensure  => file,
   content => join([
       '[Date]',
-      'date.timezone = America/Los_Angeles'
+      'date.timezone = America/Los_Angeles',
     ]),
-  notify  => Service['httpd'],
+  notify  => Class['apache::service'],
 }
 ```
 
@@ -115,10 +115,10 @@ that PHP will read to configure time zone (following PHP [date.timezone
 docs][php-date-timezone]). You can use any of the [Supported
 Timezones][php-timezones] described.
 
-The new part here is the `notify => Service['httpd']`. This one is critical for
-Puppet to understand. It tells Puppet to notify the service (and reconfigure
-itself) if there are changes to the file being applied. Notice the
-`Service[httpd]: Triggered 'refresh'` in your apply output.
+The new part here is the `notify =>` line. This one is critical for you to
+understand as it is a core Puppet strength. This tells Puppet to notify the
+service (and reconfigure itself) if there are changes to the file being applied.
+Notice the `Service[httpd]: Triggered 'refresh'` in your apply output.
 
 Why? PHP reads this file when the Apache web server starts up. That means if you
 create the file and put it there nothing happens until next time the Apache
