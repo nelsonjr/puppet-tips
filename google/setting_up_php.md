@@ -117,7 +117,8 @@ Timezones][php-timezones] described.
 
 The new part here is the `notify => Service['httpd']`. This one is critical for
 Puppet to understand. It tells Puppet to notify the service (and reconfigure
-itself) if there are changes to the file being applied.
+itself) if there are changes to the file being applied. Notice the
+`Service[httpd]: Triggered 'refresh'` in your apply output.
 
 Why? PHP reads this file when the Apache web server starts up. That means if you
 create the file and put it there nothing happens until next time the Apache
