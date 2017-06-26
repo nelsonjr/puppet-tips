@@ -56,7 +56,7 @@ file { '/var/www/html/index.php':
 ... and apply ....
 
 ```
-[root@my-first-app ~]# puppet apply php-sample.pp 
+[root@my-first-app ~]# puppet apply php-sample.pp
 Notice: Compiled catalog for my-first-app.c.graphite-playground.google.com.internal in environment production in 1.31 seconds
 Notice: /Stage[main]/Main/File[/var/www/html/index.html]/ensure: removed
 Notice: /Stage[main]/Main/File[/var/www/html/index.php]/ensure: defined content as '{md5}7b787125b1026cc7582f46a127f58115'
@@ -71,5 +71,80 @@ should see something like this:
 Now it is Sun, 25 Jun 2017 07:38:19 +0000
 ```
 
+## Updating time zone
+
+You will notice that the time is apparently not correct. Actually it is (the
+machine has its clock synced to an atomic clock). The "problem" is that it is
+showing the time in "UTC" (Greenwich) time zone "+0000".
+
+PHP `date('r')` command draws the time zone from the machine, so we need to
+adjust the machine time zone accordingly. (There are more sophisticated ways of
+dealing with global time, but they are beyond this quick start tutorial).
+
+You'll never guess: we'll be using Puppet to do that :) We'll write this Puppet
+manifest once and use it anytime we need. As before put it in your file and
+apply it using Puppet:
+
+```puppet
+include apache
+include apache::mod::php
+
+file { '/etc/php.d/timezone.ini':
+  ensure  => file,
+  content => join([
+      '[Date]',
+      'date.timezone = America/Los_Angeles'
+    ]),
+  notify  => Service['httpd'],
+}
+```
+
+The expected output:
+
+```
+[root@my-first-app ~]# puppet apply time.php
+Notice: Compiled catalog for my-first-app.c.graphite-playground.google.com.internal in environment production in 1.50 seconds
+Notice: /Stage[main]/Main/File[/etc/php.d/timezone.ini]/ensure: defined content as '{md5}34cb0851c4094296a53415c09486c53d'
+Notice: /Stage[main]/Apache::Service/Service[httpd]: Triggered 'refresh' from 1 events
+Notice: Applied catalog in 1.80 seconds
+[root@my-first-app ~]#
+```
+
+The `include` and `file` portions are not new. We're just creating another file
+that PHP will read to configure time zone (following PHP [date.timezone
+docs][php-date-timezone]). You can use any of the [Supported
+Timezones][php-timezones] described.
+
+The new part here is the `notify => Service['httpd']`. This one is critical for
+Puppet to understand. It tells Puppet to notify the service (and reconfigure
+itself) if there are changes to the file being applied.
+
+Why? PHP reads this file when the Apache web server starts up. That means if you
+create the file and put it there nothing happens until next time the Apache
+server restarts (or reloads gracefully). Puppet is now watching the file you
+defined, and if **and only if** there are changes to that file it will tell
+Apache to reload gracefully, picking up the changes.
+
+### Try without Puppet yourself
+
+1. Change `/etc/php.d/php.ini` to some other time zone
+2. Reload your web page
+3. You will notice that nothing changed
+4. Now execute `systemctl restart httpd`
+5. Reload the page on the browser
+6. Now it shows the correct time zones.
+
+Puppet just did that for you without needing to resort to understanding which
+command on the operating system does that (systemctl is for Cent OS, other
+operating systems uses different commands), and without the need to know how to
+interface with Apache itself.
+
+This is what Puppet is great for.
+
+Ah... added bonus: these manifests you wrote will run on any Linux operating
+system without changes.
+
 
 [PHP]: https://www.php.net
+[php-date-timezone]: http://php.net/manual/en/datetime.configuration.php#ini.date.timezone
+[php-timezones]: http://php.net/manual/en/timezones.america.php
