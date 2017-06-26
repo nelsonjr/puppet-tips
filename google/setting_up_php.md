@@ -145,10 +145,10 @@ operating systems uses different commands that you have to know to manage
 them.** Note that you also did not need to know all the inner details of Apache
 or PHP get this this going.
 
-> Pro Tip: Before you deploy your application for real (what we call production)
-> I suggest you do understand better Apache and PHP. How to configure it
-> properly: to run fast, secure, reliable. It sucks when you put your site and
-> some hacker vandalizes it, or worse, steals all your data.
+> *[Pro Tip]* Before you deploy your application for real (what we call
+> production) I suggest you do understand better Apache and PHP. How to
+> configure it properly: to run fast, secure, reliable. It sucks when you put
+> your site and some hacker vandalizes it, or worse, steals all your data.
 
 That's it for now. I hope you got the basis of what Puppet is great at.
 
